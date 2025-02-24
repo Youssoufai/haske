@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { FaChartLine, FaGraduationCap, FaHospital } from "react-icons/fa";
 const Mission = () => {
     return (
         <>
@@ -8,12 +8,17 @@ const Mission = () => {
                     <h2 className='text-xs text-center text-green'>OUR MISSION & VISION</h2>
                     <h1 className='text-3xl font-bold'>VISIONARY LEADERSHIP, UNITED PROGRESS</h1>
                 </div>
-                <div>
-
-                </div>
-                <div>
-
-                </div>
+                <section>
+                    <div>
+                        <FaChartLine />
+                    </div>
+                    <div>
+                        <FaGraduationCap />
+                    </div>
+                    <div>
+                        <FaHospital />
+                    </div>
+                </section>
             </section>
         </>
     )
