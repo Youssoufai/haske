@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#bg {
+    background: linear-gradient(to right, green, black);
+}
+
+.bag {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.712), rgba(0, 0, 0, 0.731)), url('../public/adamawa3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
