@@ -75,7 +75,7 @@ const Form = () => {
                         </div>
 
                         {/* Full-width Button */}
-                        <button className="w-full bg-green-600 font-semibold py-3 rounded-md shadow-md hover:bg-green-700 transition">
+                        <button className="w-full bg-green text-white font-semibold py-3 rounded-md shadow-md hover:bg-green-700 transition">
                             Get Involved
                         </button>
                     </form>

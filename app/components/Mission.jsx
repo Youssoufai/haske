@@ -7,49 +7,62 @@ const Mission = () => {
     return (
         <>
 
-            <section className="h-screen bg-black text-white p-12 flex flex-col items-center justify-center">
+            <section className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 md:px-12 py-16">
 
-                <div className="text-center space-y-3">
-                    <h2 className="text-xs text-green-500 tracking-widest">OUR MISSION & VISION</h2>
-                    <h1 className="text-4xl font-bold text-green">VISIONARY LEADERSHIP, UNITED PROGRESS</h1>
-                </div>
+                {/* Title Section */}
+                <motion.div
+                    initial={{ opacity: 0, y: -30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7 }}
+                    className="text-center space-y-3"
+                >
+                    <h2 className="text-xs md:text-sm text-green-500 tracking-widest uppercase">
+                        Our Mission & Vision
+                    </h2>
+                    <h1 className="text-3xl md:text-5xl font-bold text-green">
+                        Visionary Leadership, United Progress
+                    </h1>
+                </motion.div>
 
+                {/* Cards Section */}
+                <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 w-full max-w-6xl">
 
-                <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-
+                    {/* Economic Growth Card */}
                     <motion.div
-                        className="flex flex-col items-center text-center p-8 bg-white text-black rounded-xl shadow-lg"
+                        className="flex flex-col items-center text-center p-8 bg-white text-black rounded-xl shadow-lg transition hover:scale-105"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        <FaChartLine className="text-green text-5xl mb-4" />
-                        <h2 className="text-xl font-semibold text-green">Economic Growth</h2>
+                        <FaChartLine className="text-green-600 text-6xl mb-4" />
+                        <h2 className="text-xl font-semibold text-green-700">Economic Growth</h2>
                         <p className="text-sm text-gray-600">Building a resilient and sustainable economy that benefits every individual.</p>
                     </motion.div>
 
+                    {/* Education Card */}
                     <motion.div
-                        className="flex flex-col items-center text-center p-8 bg-white text-black rounded-xl shadow-lg"
+                        className="flex flex-col items-center text-center p-8 bg-white text-black rounded-xl shadow-lg transition hover:scale-105"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.4 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
                     >
-                        <FaGraduationCap className="text-green text-5xl mb-4" />
-                        <h2 className="text-xl font-semibold text-green">Quality Education for All</h2>
+                        <FaGraduationCap className="text-green-600 text-6xl mb-4" />
+                        <h2 className="text-xl font-semibold text-green-700">Quality Education for All</h2>
                         <p className="text-sm text-gray-600">Ensuring equal access to quality education to empower future generations.</p>
                     </motion.div>
 
-
+                    {/* Healthcare Card */}
                     <motion.div
-                        className="flex flex-col items-center text-center p-8 bg-white text-black rounded-xl shadow-lg"
+                        className="flex flex-col items-center text-center p-8 bg-white text-black rounded-xl shadow-lg transition hover:scale-105"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.6 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
                     >
-                        <FaHospital className="text-green text-5xl mb-4" />
-                        <h2 className="text-xl font-semibold text-green">Healthcare Services for All</h2>
+                        <FaHospital className="text-green-600 text-6xl mb-4" />
+                        <h2 className="text-xl font-semibold text-green-700">Healthcare Services for All</h2>
                         <p className="text-sm text-gray-600">Providing accessible and high-quality healthcare to every citizen.</p>
                     </motion.div>
+
                 </section>
             </section>
 

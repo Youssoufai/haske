@@ -1,52 +1,48 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
-
+import { React, useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
     return (
-        <motion.nav
-            className="flex justify-between p-6 md:p-8 items-center bg-black text-white"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-        >
-            {/* Logo */}
-            <motion.div
-                className="text-3xl md:text-4xl font-bold text-white"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-            >
-                MAGA
-            </motion.div>
+        <nav className="bg-black text-white p-8 fixed w-full z-50">
+            <div className="container mx-auto flex justify-between items-center">
+                {/* Logo */}
+                <div className="text-2xl font-bold">MAGA HASKE</div>
 
-            {/* Navigation Links */}
-            <ul className="flex space-x-6 text-lg font-medium">
-                {["Home", "About", "News", "Contact"].map((item, index) => (
-                    <motion.li
-                        key={index}
-                        className="cursor-pointer hover:text-green-500 transition duration-300"
+                {/* Desktop Menu */}
+                <div className="hidden md:flex space-x-6">
+                    <a href="#" className="hover:text-green-400 transition">Home</a>
+                    <a href="#" className="hover:text-green-400 transition">About</a>
+                    <a href="#" className="hover:text-green-400 transition">Services</a>
+                    <a href="#" className="hover:text-green-400 transition">Contact</a>
+                </div>
+
+                {/* Mobile Menu Button */}
+                <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+                    {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+                </button>
+            </div>
+
+            {/* Mobile Menu */}
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.2 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.3 }}
+                        className="md:hidden bg-gray-800 py-4 px-6 flex flex-col space-y-4 items-center"
                     >
-                        {item}
-                    </motion.li>
-                ))}
-            </ul>
-
-            {/* Button */}
-            <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-            >
-                <button className="px-6 py-2 bg-[#00A86B] text-white font-semibold rounded-lg shadow-md hover:bg-green-600 transition">
-                    Get Involved
-                </button>
-            </motion.div>
-        </motion.nav>
+                        <a href="#" className="hover:text-green-400 transition" onClick={() => setIsOpen(false)}>Home</a>
+                        <a href="#" className="hover:text-green-400 transition" onClick={() => setIsOpen(false)}>About</a>
+                        <a href="#" className="hover:text-green-400 transition" onClick={() => setIsOpen(false)}>Services</a>
+                        <a href="#" className="hover:text-green-400 transition" onClick={() => setIsOpen(false)}>Contact</a>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </nav>
     );
 };
 
