@@ -123,7 +123,7 @@ function VoteForm() {
                     {/* Full-width Button */}
                     <button
                         type="submit"
-                        className="w-full bg-green-600 text-white font-semibold py-3 rounded-md shadow-md hover:bg-green-700 transition"
+                        className="w-full bg-green text-white font-semibold py-3 rounded-md shadow-md hover:bg-green transition"
                     >
                         Get Involved
                     </button>
