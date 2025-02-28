@@ -1,4 +1,3 @@
-import { getVoters } from "@/actions";
 import About from "./components/About";
 import Acheivments from "./components/Acheivments";
 import Form from "./components/Form";
@@ -8,9 +7,7 @@ import Mission from "./components/Mission";
 import Raw from "./components/Raw";
 import YouthLeader from "./components/YouthLeader";
 
-export async function Home() {
-  const votes = await getVoters();
-  console.log(votes);
+export default function Home() {
   return (
     <>
       <Hero />

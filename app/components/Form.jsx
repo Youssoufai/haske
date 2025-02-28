@@ -1,8 +1,7 @@
 "use client";
 import { useState } from "react";
-import { createVote } from "@/app/actions/index";
-
-export default function VoteForm() {
+import { createVote } from "@/actions";
+function VoteForm() {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -140,3 +139,4 @@ export default function VoteForm() {
         </section>
     );
 }
+export default VoteForm;
