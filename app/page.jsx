@@ -10,14 +10,14 @@ import YouthLeader from "./components/YouthLeader";
 export default function Home() {
   return (
     <>
-      <Hero />
+      {/*       <Hero />
       <About />
       <Mission />
       <Ignite />
       <YouthLeader />
       <Acheivments />
       <Raw />
-      <Form />
+      <Form /> */}
     </>
   );
 }
