@@ -23,7 +23,7 @@ const Footer = () => {
                     <div>
                         <h1 className="font-bold text-green-400 text-lg">Overview</h1>
                         <ul className="mt-4 space-y-2">
-                            {["Donation", "Join Page", "Volunteering", "Contact", "Join Us"].map((item) => (
+                            {["Join Page", "Volunteering", "Contact", "Join Us"].map((item) => (
                                 <li key={item} className="hover:text-green-300 transition cursor-pointer">
                                     {item}
                                 </li>

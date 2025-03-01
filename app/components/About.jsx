@@ -30,7 +30,7 @@ const About = () => {
                         transition={{ duration: 1, delay: 0.4 }}
                         className="text-gray-700 text-lg md:text-xl leading-relaxed"
                     >
-                        As a young and ambitious leader, I am driven by the conviction that the future of Nigeria belongs to its youth. Growing up, I witnessed firsthand the transformative power of youth participation in shaping the course of our nation's history. I believe that it's time for a new generation of leaders to take the reins, bringing fresh perspectives, innovative ideas, and a deep commitment to the values of democracy, equity, and justice. As a gubernatorial candidate, I am dedicated to amplifying the voices of young Nigerians, creating opportunities for their participation and empowerment, and working tirelessly to build a brighter future for our great nation.
+                        As a young and ambitious leader, I am driven by the conviction that the future of Nigeria belongs to its youth. Growing up, I witnessed firsthand the transformative power of youth participation in shaping the course of our nation's history. I believe that it's time for a new generation of leaders to take the reins, bringing fresh perspectives, innovative ideas, and a deep commitment to the values of democracy, equity, and justice. As a philosophy, I am dedicated to amplifying the voices of young Nigerians, creating opportunities for their participation and empowerment, and working tirelessly to build a brighter future for our great nation.
                     </motion.p>
 
                     {/* Button with hover animation */}

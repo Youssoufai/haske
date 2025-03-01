@@ -17,7 +17,7 @@ const Mission = () => {
                     className="text-center space-y-3"
                 >
                     <h2 className="text-xs md:text-sm text-green-500 tracking-widest uppercase">
-                        Our Mission & Vision
+                        Why We Matter
                     </h2>
                     <h1 className="text-3xl md:text-5xl font-bold text-green">
                         Visionary Leadership, United Progress
